@@ -1,19 +1,23 @@
 <template>
 <div id="app">
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+    <menu-bubble />
 </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import MenuBubble from './components/MenuBubble.vue'
 
 export default {
     name: 'App',
     components: {
-        HelloWorld
+        MenuBubble
     }
 }
 </script>
+
+<style lang="sass">
+@import './assets/sass/main.scss'
+</style>
 
 <style>
 #app {
