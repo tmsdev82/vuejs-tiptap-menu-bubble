@@ -9,7 +9,7 @@
             <button class="menububble__button" :class="{ 'is-active': isActive.italic() }" @click="commands.italic">
                 <icon name="italic" size="small" />
             </button>
-            <button class="menububble__button" :class="{ 'is-active': isActive.italic() }" @click="commands.code">
+            <button class="menububble__button" :class="{ 'is-active': isActive.code() }" @click="commands.code">
                 <icon name="code" size="small" />
             </button>
 
