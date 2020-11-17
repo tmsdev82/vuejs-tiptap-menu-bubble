@@ -15,9 +15,7 @@
 
         </div>
     </editor-menu-bubble>
-
     <editor-content class="editor__content" :editor="editor" />
-
 </div>
 </template>
 
@@ -54,7 +52,19 @@ export default {
         Icon
     },
     props: {
-
+        propContent: {
+            type: String,
+            required: true
+        }
+    },
+    watch : {
+        propContent: function(newVal, oldVal){
+            console.log("newVal: " + newVal + ", oldVal: " + oldVal);
+            if (newVal !== oldVal){
+                console.log("editor content: " +this.editor.content)
+                this.editor.setContent(newVal);
+            }
+        }
     },
     data() {
         return {
@@ -80,14 +90,7 @@ export default {
                     new Underline(),
                     new History(),
                 ],
-                content: `
-          <h2>
-            Menu Bubble
-          </h2>
-          <p>
-            Hey, try to select some text here. There will popup a menu for selecting some inline styles. <em>Remember:</em> you have full control about content and styling of this menu.
-          </p>
-        `,
+                
             }),
         }
     },
