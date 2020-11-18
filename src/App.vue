@@ -1,23 +1,21 @@
 <template>
 <div id="app">
-    <menu-bubble :propContent="fileContent" />
-    <file-reader @load="fileContent = $event"></file-reader>
+    <menu-bubble />
+   
 </div>
 </template>
 
 <script>
 import MenuBubble from './components/MenuBubble.vue'
-import FileReader from './components/FileReader'
 
 export default {
     name: 'App',
     components: {
         MenuBubble,
-        FileReader
     },
     data() {
         return {
-            fileContent: ""
+            
         }
     }
 }
